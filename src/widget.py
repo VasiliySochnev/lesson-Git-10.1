@@ -1,5 +1,6 @@
-from src.masks import mask_card, mask_check
 from typing import Union
+
+from src.masks import mask_card, mask_check
 
 
 def mask_type_card_check(coming_str: Union[str]) -> Union[str]:
