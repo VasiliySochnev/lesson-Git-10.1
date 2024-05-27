@@ -3,7 +3,8 @@ from typing import Union
 
 
 def mask_type_card_check(coming_str: Union[str]) -> Union[str]:
-    """Функция, которая возвращает исходную строку с замаскированным номером карты/счета"""
+    """Функция, которая возвращает исходную строку
+    с замаскированным номером карты/счета"""
 
     new_coming_str = coming_str.split()
     mask_number = ""
