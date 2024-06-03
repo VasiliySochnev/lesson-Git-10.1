@@ -1,7 +1,7 @@
 from typing import Any, Iterable
 
 
-def new_list_pass_value(id_list: list[dict[str, Any]], default_state: bool = True) -> list[dict[str, Any]]:
+def new_list_pass_value(id_list: list[dict[str, Any]], default_state: str = "EXECUTED") -> list[dict[str, Any]]:
     """Функция, которая принимает список словарей и значение для ключа
     'state' и возвращает новый список, содержащий только те словари, у которых ключ
     'state' содержит переданное в функцию значение"""
