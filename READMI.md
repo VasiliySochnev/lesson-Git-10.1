@@ -35,3 +35,14 @@ pip install -r requirements.txt
    + ___mypy = "^1.10.0"___
    + ___black = "^24.4.2"___
    + ___isort = "^5.13.2"___
+
+#### Тестовые файлы для функций:
+   + ___test_masks.py___
+   + ___test_widget.py___
+   + ___test_processing.py___
+
+#### Файл с фикстурами:
+   + ___conftest.py___
+
+#### Покрытие тестами на данном этапе:
+   + ___98%___
