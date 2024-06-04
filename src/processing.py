@@ -16,5 +16,5 @@ def sort_date_id_list(id_list: Iterable, reverse_list: bool = True) -> Iterable:
     """Функция, которая принимает список словарей и возвращает список,
     в котором исходные словари отсортированы по убыванию даты (ключ date),
     функция принимает два аргумента, второй задает порядок сортировки (убывание)"""
-    sort_date_list = sorted(id_list, key=lambda date_dick: date_dick("date"), reverse=reverse_list)
+    sort_date_list = sorted(id_list, key=lambda date_dict: date_dict["date"], reverse=reverse_list)
     return sort_date_list
