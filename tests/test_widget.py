@@ -13,3 +13,7 @@ def test_mask_type_card_check_second():
 
 def test_mask_type_card_check_third(check_str):
     assert mask_type_card_check("Счет 35383033474447895560") == check_str
+
+
+def test_date_conversion():
+    assert date_conversion("2018-07-11T02:26:18.671407") == "11.07.2018"
