@@ -1,5 +1,3 @@
-import pytest
-
 from src.widget import date_conversion, mask_type_card_check
 
 

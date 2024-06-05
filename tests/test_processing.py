@@ -1,5 +1,3 @@
-import pytest
-
 from src.processing import new_list_pass_value, sort_date_id_list
 
 
