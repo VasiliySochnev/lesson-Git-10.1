@@ -45,4 +45,4 @@ pip install -r requirements.txt
    + ___conftest.py___
 
 #### Покрытие тестами на данном этапе:
-   + ___100___
+   + ___100%___
