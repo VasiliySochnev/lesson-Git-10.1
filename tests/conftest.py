@@ -33,7 +33,7 @@ def sort_id_dict_list():
 
 @pytest.fixture
 def transactions():
-    return [
+    return ([
         {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572",
         "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
             "description": "Перевод организации",
@@ -62,4 +62,4 @@ def transactions():
         "operationAmount": {"amount": "67314.70", "currency": {"name": "руб.", "code": "RUB"}},
             "description": "Перевод организации",
             "from": "Visa Platinum 1246377376343588",
-            "to": "Счет 14211924144426031657"}]
+            "to": "Счет 14211924144426031657"}])
