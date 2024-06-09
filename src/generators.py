@@ -7,8 +7,7 @@ def filter_by_currency(transactions: List[Dict[str, Any]], currency: str) ->List
 
 
 def transaction_descriptions(transactions: List[Dict[str, Any]]) -> Generator[str, None, None]:
-    transaction_list = transactions[0]
-    for transaction in transaction_list:
+    for transaction in transactions:
         yield transaction.get("description", "Описание операции отсутствует")
 
 
