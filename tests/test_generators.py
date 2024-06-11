@@ -1,3 +1,5 @@
+import pytest
+
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
 
@@ -22,18 +24,23 @@ def test_transaction_descriptions(transactions):
         assert next(descriptions) == expected
 
 
-def test_card_number_generator():
+@pytest.mark.parametrize(
+    "expected",
+    [
+        [
+            "0000 0000 0000 0001",
+            "0000 0000 0000 0002",
+            "0000 0000 0000 0003",
+            "0000 0000 0000 0004",
+            "0000 0000 0000 0005",
+        ]
+    ],
+)
+def test_card_number_generator(expected: list[str]):
     start = 1
     end = 5
-    expected_results = [
-        "0000 0000 0000 0001",
-        "0000 0000 0000 0002",
-        "0000 0000 0000 0003",
-        "0000 0000 0000 0004",
-        "0000 0000 0000 0005",
-    ]
 
     generator = card_number_generator(start, end)
 
-    for expected in expected_results:
-        assert next(generator) == expected
+    for expect in expected:
+        assert next(generator) == expect
