@@ -1,6 +1,5 @@
 import pytest
 
-
 from src.masks import mask_card, mask_check
 
 
