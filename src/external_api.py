@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def get_transaction_amount_in_rubles(transaction: dict) -> float | None:
+def get_transaction_amount_in_rubles(transaction: dict) -> dict:
     """Функция, которая принимает на вход транзакцию и возвращает сумму транзакции в рублях."""
 
     amount = float(transaction["amount"])
@@ -27,8 +27,8 @@ def get_transaction_amount_in_rubles(transaction: dict) -> float | None:
         data = response.json()
         return float(data["result"])
 
-    else:
-        raise ValueError(f"Неизвестная валюта {currency}.")
+    # else:
+    #     raise ValueError(f"Неизвестная валюта {currency}.")
 
 
 if __name__ == "__main__":
