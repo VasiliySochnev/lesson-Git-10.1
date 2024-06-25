@@ -1,5 +1,4 @@
 import logging
-
 import os
 
 # Получаем путь к директории src
@@ -27,8 +26,8 @@ logging.basicConfig(
 )  # Перезапись файла при каждом запуске
 
 # Создаем логеры для компонентов программы
-masks_card_logger = logging.getLogger("mask.card")
-masks_check_logger = logging.getLogger("mask.check")
+masks_card_logger = logging.getLogger("mask.card.loger")
+masks_check_logger = logging.getLogger("mask.check.loger")
 
 
 def mask_card(number_card: str) -> str:
