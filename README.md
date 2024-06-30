@@ -67,6 +67,9 @@ pip install -r requirements.txt
    + ___test_decorators.py___
    + ___test_utils.py___
    + ___test_external_api.py___
+   + ___test_read_from_csv.py___
+   + ___data/transactions_csv_test.csv___
+   + ___test_read_from_excel.py___
 ---
 #### Файл с фикстурами:
    + ___conftest.py___
@@ -76,4 +79,4 @@ pip install -r requirements.txt
    + ___utils_logger.log___
 ---
 #### Покрытие тестами на данном этапе:
-   + ___90%___
+   + ___89%___

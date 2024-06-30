@@ -1,5 +1,6 @@
-from src.read_from_csv import read_from_csv
 from unittest.mock import patch
+
+from src.read_from_csv import read_from_csv
 
 
 @patch("csv.DictReader")
