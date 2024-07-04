@@ -1,4 +1,2 @@
-2024-06-25 20:09:39,251 - trans.data.loger - INFO - Start file processing: data\operations.json
-2024-06-25 20:09:39,251 - trans.data.loger - INFO - File data\operations.json successfully opened
-2024-06-25 20:09:39,251 - trans.data.loger - INFO - File data\operations.json successfully read
-2024-06-25 20:09:39,251 - trans.data.loger - INFO - File data\operations.json contains correct data
+2024-06-29 20:12:36,997 - trans.data.loger - INFO - Start file processing: data\operations.json
+2024-06-29 20:12:37,000 - trans.data.loger - ERROR - Decoding error JSON in file data\operations.json

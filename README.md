@@ -48,6 +48,10 @@ pip install -r requirements.txt
     + ***get_transactions_data***
 12. Функция, которая принимает на вход транзакцию и возвращает сумму транзакции в рублях.
     + ***get_transaction_amount_in_rubles***
+13. Функция чтения данных из CSV - файла и вывода транзакций в виде списка словарей.
+    + ***read_from_csv***
+14. Функция для чтения Excel - файла и вывода транзакций в виде списка словарей.
+    + ***read_from_excel***
 ---
 #### Группы линтеров:
    + ___flake8 = "^7.0.0"___
@@ -63,6 +67,9 @@ pip install -r requirements.txt
    + ___test_decorators.py___
    + ___test_utils.py___
    + ___test_external_api.py___
+   + ___test_read_from_csv.py___
+   + ___data/transactions_csv_test.csv___
+   + ___test_read_from_excel.py___
 ---
 #### Файл с фикстурами:
    + ___conftest.py___
@@ -72,4 +79,4 @@ pip install -r requirements.txt
    + ___utils_logger.log___
 ---
 #### Покрытие тестами на данном этапе:
-   + ___90%___
+   + ___89%___
