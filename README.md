@@ -10,7 +10,6 @@ git clone https://github.com/VasiliySochnev/lesson-Git-10.1.git
 pip install -r requirements.txt
 ````
 ---
-
 ### Краткое описание:
 #### Содержит в себе следующие функции:
 1. Функция, которая возвращает маску номера карты. __module masks.py__
@@ -50,15 +49,12 @@ pip install -r requirements.txt
 12. Функция, которая принимает на вход транзакцию и возвращает сумму транзакции в рублях.
     + ***get_transaction_amount_in_rubles***
 ---
- 
 #### Группы линтеров:
    + ___flake8 = "^7.0.0"___
    + ___mypy = "^1.10.0"___
    + ___black = "^24.4.2"___
    + ___isort = "^5.13.2"___
-
 ---
-
 #### Тестовые файлы для функций:
    + ___test_masks.py___
    + ___test_widget.py___
@@ -68,11 +64,12 @@ pip install -r requirements.txt
    + ___test_utils.py___
    + ___test_external_api.py___
 ---
-
 #### Файл с фикстурами:
    + ___conftest.py___
-
 ---
-
+#### Папка с логерами  ***logs***:
+   + ___masks_logger.log___
+   + ___utils_logger.log___
+---
 #### Покрытие тестами на данном этапе:
    + ___90%___
