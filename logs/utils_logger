@@ -1,2 +1,4 @@
-2024-06-29 20:12:36,997 - trans.data.loger - INFO - Start file processing: data\operations.json
-2024-06-29 20:12:37,000 - trans.data.loger - ERROR - Decoding error JSON in file data\operations.json
+2024-07-06 01:00:41,223 - trans.data.loger - INFO - Start file processing: D:\all\Skypro\pycharm project\Lesson 9.1 Poetry\Lesson 9.1 Poetry\data\operations.json
+2024-07-06 01:00:41,223 - trans.data.loger - INFO - File D:\all\Skypro\pycharm project\Lesson 9.1 Poetry\Lesson 9.1 Poetry\data\operations.json successfully opened
+2024-07-06 01:00:41,224 - trans.data.loger - INFO - File D:\all\Skypro\pycharm project\Lesson 9.1 Poetry\Lesson 9.1 Poetry\data\operations.json successfully read
+2024-07-06 01:00:41,225 - trans.data.loger - INFO - File D:\all\Skypro\pycharm project\Lesson 9.1 Poetry\Lesson 9.1 Poetry\data\operations.json contains correct data
