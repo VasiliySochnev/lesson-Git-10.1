@@ -30,7 +30,7 @@ def main() -> None:
             break
         elif user_file_choice == "3":
             print("Для обработки выбран XLSX-файл.")
-            list_transactions = read_from_excel(os.path.join(DATA_DIR, "transactions_excel.xlsx"))
+            list_transactions = read_from_excel(os.path.join(DATA_DIR,"transactions_excel.xlsx"))
             break
         else:
             print("Некорректный выбор. Попробуйте еще раз.")
@@ -100,7 +100,7 @@ def main() -> None:
         elif filter_type == "date":
             transactions = sort_date_id_list(transactions, filter_value)
         elif filter_type == "currency":
-            transactions = [txn for txn in transactions if txn["operationAmount"]["currency"]["code"] == filter_value]
+            transactions = [txn for txn in transactions if txn.get("operationAmount", {}).get("currency", {}).get("code") == filter_value]
         elif filter_type == "description":
             transactions = search_transactions(transactions, filter_value)
 
@@ -120,8 +120,9 @@ def main() -> None:
         to_ = mask_type_card_check(transaction.get("to"))
         date = date_conversion(transaction.get("date"))
 
-        amount = transaction["operationAmount"]["amount"]
-        currency = transaction["operationAmount"]["currency"]["name"]
+        amount = transaction.get("operationAmount", {}).get("amount")
+        # amount = transaction["operationAmount"].get("amount")
+        currency = transaction.get("operationAmount", {}).get("currency", {}).get("name")
 
         if description == "Открытие вклада":
             print(f"{date} {description}\nСчет {to_}\nСумма: {amount} {currency}\n")
