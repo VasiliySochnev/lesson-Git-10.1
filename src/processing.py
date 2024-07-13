@@ -1,7 +1,9 @@
-from typing import Any, Iterable
+import typing
 
 
-def new_list_pass_value(id_list: list[dict[str, Any]], default_state: str = "EXECUTED") -> list[dict[str, Any]]:
+def new_list_pass_value(
+    id_list: list[dict[str, typing.Any]], default_state: str = "EXECUTED"
+) -> list[dict[str, typing.Any]]:
     """Функция, которая принимает список словарей и значение для ключа
     'state' и возвращает новый список, содержащий только те словари, у которых ключ
     'state' содержит переданное в функцию значение"""
@@ -12,7 +14,7 @@ def new_list_pass_value(id_list: list[dict[str, Any]], default_state: str = "EXE
     return new_id_list
 
 
-def sort_date_id_list(id_list: Iterable, reverse_list: bool = True) -> Iterable:
+def sort_date_id_list(id_list: typing.Iterable, reverse_list: bool = True) -> typing.Iterable:
     """Функция, которая принимает список словарей и возвращает список,
     в котором исходные словари отсортированы по убыванию даты (ключ date),
     функция принимает два аргумента, второй задает порядок сортировки (убывание)"""

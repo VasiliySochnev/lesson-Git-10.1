@@ -1,7 +1,9 @@
-from typing import Any, Dict, Generator, List
+import typing
 
 
-def filter_by_currency(transactions: List[Dict[str, Any]], currency: str) -> List[Dict[str, Any]]:
+def filter_by_currency(
+    transactions: typing.List[typing.Dict[str, typing.Any]], currency: str
+) -> typing.List[typing.Dict[str, typing.Any]]:
     """Функция, которая принимает коллекцию со списком словарей с банковскими операциями и возвращает итератор,
     который выдает по очереди операции, в которых указана заданная валюта."""
 
@@ -12,7 +14,9 @@ def filter_by_currency(transactions: List[Dict[str, Any]], currency: str) -> Lis
     )
 
 
-def transaction_descriptions(transactions: List[Dict[str, Any]]) -> Generator[str, None, None]:
+def transaction_descriptions(
+    transactions: typing.List[typing.Dict[str, typing.Any]]
+) -> typing.Generator[str, None, None]:
     """Генератор, который принимает коллекцию со списком словарей с банковскими операциями
     и возвращает описание каждой операции по очереди."""
 
@@ -20,7 +24,7 @@ def transaction_descriptions(transactions: List[Dict[str, Any]]) -> Generator[st
         yield transaction.get("description", "Описание операции отсутствует")
 
 
-def card_number_generator(start: int, end: int) -> str:
+def card_number_generator(start: int, end: int) -> str:  # type: ignore
     """Генератор номеров банковских карт в формате XXXX XXXX XXXX XXXX."""
 
     for number in range(start, end + 1):

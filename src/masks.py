@@ -1,5 +1,6 @@
 import logging
 import os
+from logging import Logger
 
 # Получаем путь к директории src
 SRC_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -26,7 +27,7 @@ logging.basicConfig(
 )  # Перезапись файла при каждом запуске
 
 # Создаем логеры для компонентов программы
-masks_card_logger = logging.getLogger("mask.card.loger")
+masks_card_logger: Logger = logging.getLogger("mask.card.loger")
 masks_check_logger = logging.getLogger("mask.check.loger")
 
 
