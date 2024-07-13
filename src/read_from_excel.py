@@ -1,19 +1,37 @@
-import pandas as pd
-from typing import List
-import json
+import typing
+
+import pandas as pd  # type: ignore
 
 
-def read_from_excel(file_path: str) -> list[dict] | str:
-    """Функция для чтения Excel - файла и вывода транзакций в виде списка словарей."""
-
+def read_from_excel(path: str) -> list[typing.Dict] | typing.Any:
+    """функция извлекает транзакции из файла xlsx"""
+    blank_list: list = []
+    transact_list = []
     try:
-        from_excel = pd.read_excel(file_path)
-        from_excel_dict = from_excel.to_dict(orient="records")
-
-        return from_excel_dict
-
-    except FileNotFoundError as exp:
-        return f"{exp} Файл не найден"
+        df = pd.read_excel(path)
+        df_list = df.to_dict("records")
+        for transaction in df_list:
+            transact_list.append(
+                {
+                    "id": transaction.get("id"),
+                    "state": transaction.get("state"),
+                    "date": transaction.get("date"),
+                    "operationAmount": {
+                        "amount": transaction.get("amount"),
+                        "currency": {
+                            "name": transaction.get("currency_name"),
+                            "code": transaction.get("currency_code"),
+                        },
+                    },
+                    "description": transaction.get("description"),
+                    "from": transaction.get("from"),
+                    "to": transaction.get("to"),
+                }
+            )
+        return transact_list
+    except FileNotFoundError:
+        raise FileNotFoundError(f"File {path} not found")
+        return blank_list
 
 
 if __name__ == "__main__":

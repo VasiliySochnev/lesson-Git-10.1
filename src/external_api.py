@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def get_transaction_amount_in_rubles(transaction: dict[Any, Any]) -> dict[Any, Any]:
+def get_transaction_amount_in_rubles(transaction: dict[Any, Any]) -> float:  # type: ignore
     """Функция, которая принимает на вход транзакцию и возвращает сумму транзакции в рублях."""
 
     amount = float(transaction["amount"])
